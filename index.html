@@ -136,98 +136,15 @@
             <!-- Mobile: cards column + vertical progress to the right -->
             <div class="mission-cards-col" id="missionCardsCol">
               <div class="mission-cards-row">
-                <div class="mission-card-set" id="card1">
-                  <div class="mission-card">
-                    <img src="assets/img/card-1-bg.svg" alt="1일차 미션" class="mission-card-bg">
-                    <div class="mission-card-content">
-                      <div class="mc-item mc-item--pcroom">
-                        <div class="mc-item-tag"><img src="assets/img/bi-pica.svg" alt="PICA"></div>
-                        <div class="mc-item-body">
-                          <span class="mc-item-place">PC방</span>
-                          <div class="mc-item-mileage">
-                            <span class="mc-item-num">1,500</span>
-                            <span class="mc-item-unit">미션 마일리지</span>
-                          </div>
-                        </div>
-                        <div class="mc-item-soldout" hidden>조기소진</div>
-                      </div>
-                      <img src="assets/img/ic-plus.svg" alt="" class="mc-plus">
-                      <div class="mc-item mc-item--homepc">
-                        <div class="mc-item-tag"><img src="assets/img/bi-craftbox-sm.svg" alt="CRAFTBOX"></div>
-                        <div class="mc-item-body">
-                          <span class="mc-item-place">개인PC</span>
-                          <div class="mc-item-mileage">
-                            <span class="mc-item-num">500</span>
-                            <span class="mc-item-unit">미션 마일리지</span>
-                          </div>
-                        </div>
-                        <div class="mc-item-soldout" hidden>조기소진</div>
-                      </div>
-                    </div>
-                  </div>
-                  <img src="assets/img/total2kmile.svg" alt="total 2000 미션 마일리지 증정" class="card-mileage">
+                <div class="mission-card">
+                  <img src="assets/img/card-1-bg.svg" alt="1일차 미션">
                 </div>
-                <div class="mission-card-set" id="card2">
-                  <div class="mission-card">
-                    <img src="assets/img/card-2-bg.svg" alt="2일차 미션" class="mission-card-bg">
-                    <div class="mission-card-content">
-                      <div class="mc-item mc-item--pcroom">
-                        <div class="mc-item-tag"><img src="assets/img/bi-pica.svg" alt="PICA"></div>
-                        <div class="mc-item-body">
-                          <span class="mc-item-place">PC방</span>
-                          <div class="mc-item-mileage">
-                            <span class="mc-item-num">1,500</span>
-                            <span class="mc-item-unit">미션 마일리지</span>
-                          </div>
-                        </div>
-                        <div class="mc-item-soldout" hidden>조기소진</div>
-                      </div>
-                      <img src="assets/img/ic-plus.svg" alt="" class="mc-plus">
-                      <div class="mc-item mc-item--homepc">
-                        <div class="mc-item-tag"><img src="assets/img/bi-craftbox-sm.svg" alt="CRAFTBOX"></div>
-                        <div class="mc-item-body">
-                          <span class="mc-item-place">개인PC</span>
-                          <div class="mc-item-mileage">
-                            <span class="mc-item-num">500</span>
-                            <span class="mc-item-unit">미션 마일리지</span>
-                          </div>
-                        </div>
-                        <div class="mc-item-soldout" hidden>조기소진</div>
-                      </div>
-                    </div>
-                  </div>
-                  <img src="assets/img/total2kmile.svg" alt="total 2000 미션 마일리지 증정" class="card-mileage">
+                <div class="mission-card">
+                  <img src="assets/img/card-2-bg.svg" alt="2일차 미션">
                 </div>
                 <div class="mission-card-set" id="card3">
-                  <div class="mission-card">
-                    <img src="assets/img/card-3-bg.svg" alt="3일차 미션" class="mission-card-bg">
-                    <div class="mission-card-content">
-                      <div class="mc-item mc-item--pcroom">
-                        <div class="mc-item-tag"><img src="assets/img/bi-pica.svg" alt="PICA"></div>
-                        <div class="mc-item-body">
-                          <span class="mc-item-place">PC방</span>
-                          <div class="mc-item-mileage">
-                            <span class="mc-item-num">1,500</span>
-                            <span class="mc-item-unit">미션 마일리지</span>
-                          </div>
-                        </div>
-                        <div class="mc-item-soldout" hidden>조기소진</div>
-                      </div>
-                      <img src="assets/img/ic-plus.svg" alt="" class="mc-plus">
-                      <div class="mc-item mc-item--homepc">
-                        <div class="mc-item-tag"><img src="assets/img/bi-craftbox-sm.svg" alt="CRAFTBOX"></div>
-                        <div class="mc-item-body">
-                          <span class="mc-item-place">개인PC</span>
-                          <div class="mc-item-mileage">
-                            <span class="mc-item-num">500</span>
-                            <span class="mc-item-unit">미션 마일리지</span>
-                          </div>
-                        </div>
-                        <div class="mc-item-soldout" hidden>조기소진</div>
-                      </div>
-                    </div>
-                  </div>
-                  <img src="assets/img/total2kmile.svg" alt="total 2000 미션 마일리지 증정" class="card-mileage">
+                <div class="mission-card">
+                  <img src="assets/img/card-3-bg.svg" alt="3일차 미션">
                 </div>
               </div>
 
@@ -490,25 +407,6 @@
            true  = PC방 ON  (초록)
            false = PC방 OFF (회색)  */
         var PCROOM_IS_ON = true;
-
-        /* ── 미션 카드 조기소진 상태 ──
-           true = 조기소진 오버레이 표시
-           pcroom: PC방 아이템 / homepc: 개인PC 아이템  */
-        var CARD_STATE = {
-          card1: { pcroom: false, homepc: false },
-          card2: { pcroom: false, homepc: false },
-          card3: { pcroom: false, homepc: false },
-        };
-
-        Object.keys(CARD_STATE).forEach(function(cardId) {
-          var set = document.getElementById(cardId);
-          if (!set) return;
-          var state = CARD_STATE[cardId];
-          var pcSoldout   = set.querySelector('.mc-item--pcroom .mc-item-soldout');
-          var homeSoldout = set.querySelector('.mc-item--homepc .mc-item-soldout');
-          if (pcSoldout)   pcSoldout.hidden   = !state.pcroom;
-          if (homeSoldout) homeSoldout.hidden = !state.homepc;
-        });
 
         var offBadge = document.querySelector('.pcroom-badge--off');
         var onBadge  = document.querySelector('.pcroom-badge--on');
