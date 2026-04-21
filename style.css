@@ -1078,6 +1078,12 @@ footer {
 }
 
 @media (max-width: 860px) {
+  .sec-mission {
+    background-attachment: scroll;
+    background-repeat: repeat;
+    background-size: 200vw;
+  }
+
   .mission-cards-progress {
     flex-direction: column;
     align-items: center;
