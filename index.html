@@ -7,7 +7,7 @@
   <title>이환 × 피카플레이 × 크래프트박스 PC방 이벤트</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -29,7 +29,7 @@
 
       <!-- Head title + play button (overlaid at end of "PLAY" text) -->
       <div class="hero-title-play-wrap">
-        <img src="assets/img/head-title.png" alt="헤테로 정착, 지금 PLAY - PC방에선 더 큰 혜택!" class="hero-head-title">
+        <img src="assets/img/head-title2.png" alt="헤테로 정착, 지금 PLAY - PC방에선 더 큰 혜택!" class="hero-head-title">
         <div class="hero-play-wrap" role="button" aria-label="트레일러 재생">
           <img src="assets/img/bt-play-border.svg" alt="" class="hero-play-ring">
           <img src="assets/img/bt-play-triangle.svg" alt="" class="hero-play-triangle">
@@ -565,17 +565,41 @@
           var fill = document.getElementById('progressFillVert');
           if (!section || !fill) return;
 
+          var cardMileages = [
+            document.querySelector('#card1 .card-mileage'),
+            document.querySelector('#card2 .card-mileage'),
+            document.querySelector('#card3 .card-mileage')
+          ];
+          var thresholds = [0.2, 0.55, 0.9];
+          var litSrc = 'assets/img/total2kmile-lit.svg';
+          var defaultSrc = 'assets/img/total2kmile.svg';
+
           function update() {
-            if (window.innerWidth > 860) {
-              fill.style.height = '';
-              return;
-            }
             var rect = section.getBoundingClientRect();
             var scrollable = rect.height - window.innerHeight;
             var progress = scrollable > 0
               ? Math.max(0, Math.min(1, -rect.top / scrollable))
               : 0;
+
+            if (window.innerWidth > 860) {
+              fill.style.height = '';
+              cardMileages.forEach(function(img) { if (img) img.src = defaultSrc; });
+              return;
+            }
+
             fill.style.height = (progress * 100) + '%';
+
+            cardMileages.forEach(function(img, i) {
+              if (!img) return;
+              var newSrc = progress >= thresholds[i] ? litSrc : defaultSrc;
+              if (img.dataset.currentSrc === newSrc) return;
+              img.dataset.currentSrc = newSrc;
+              img.style.opacity = '0';
+              setTimeout(function() {
+                img.src = newSrc;
+                img.style.opacity = '1';
+              }, 300);
+            });
           }
 
           window.addEventListener('scroll', update, { passive: true });
