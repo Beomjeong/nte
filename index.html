@@ -93,11 +93,11 @@
       </div>
     </div>
     <div class="bar-pcroom-info">
-  <span class="bar-info-item"></span> 본 이벤트는 
-  <span class="txt-orange-bold-line">피카플레이 가맹 PC방</span> 또는 
-  <span class="txt-blue-bold">개인 PC에서</span> 
-  <span class="txt-blue-bold-line">크래프트박스 설치</span> 후 참여 가능합니다.
-</div>
+      <span class="bar-info-item"></span> 본 이벤트는
+      <span class="txt-orange-bold-line">피카플레이 가맹 PC방</span> 또는
+      <span class="txt-blue-bold">개인 PC에서</span>
+      <span class="txt-blue-bold-line">크래프트박스 설치</span> 후 참여 가능합니다.
+    </div>
   </div>
   <!-- ════════════════════════════════════════════
      TICKER
@@ -118,498 +118,494 @@
      이벤트 미션
 ════════════════════════════════════════════ -->
   <section class="sec sec-mission">
-      <div class="sec-inner">
+    <div class="sec-inner">
 
-        <!-- Section title -->
-        <div class="sec-title-row">
-          <img src="assets/img/mozaic-arrow-r.svg" alt="" class="sec-arrow">
-          <img src="assets/img/mission-title.png" alt="이벤트 미션" class="sec-title-img">
-          <img src="assets/img/mozaic-arrow-l.svg" alt="" class="sec-arrow">
+      <!-- Section title -->
+      <div class="sec-title-row">
+        <img src="assets/img/mozaic-arrow-r.svg" alt="" class="sec-arrow">
+        <img src="assets/img/mission-title.png" alt="이벤트 미션" class="sec-title-img">
+        <img src="assets/img/mozaic-arrow-l.svg" alt="" class="sec-arrow">
+      </div>
+
+      <div class="mission-layout">
+
+        <!-- Cards + progress (stacked vertically on ≤1300px) -->
+        <div class="mission-cards-progress" id="missionCardsProgress">
+
+          <!-- Desktop: cards in a row above the progress bar -->
+          <!-- Mobile: cards column + vertical progress to the right -->
+          <div class="mission-cards-col" id="missionCardsCol">
+            <div class="mission-cards-row">
+
+              <div class="mission-card-set" id="card1">
+                <div class="mission-card">
+                  <img src="assets/img/card-1-bg.svg" alt="1일차 미션" class="mission-card-bg">
+                  <div class="mission-card-content">
+                    <div class="mc-item mc-item--pcroom">
+                      <div class="mc-item-tag"><img src="assets/img/bi-pica.svg" alt="PICA"></div>
+                      <div class="mc-item-body">
+                        <span class="mc-item-place">PC방</span>
+                        <div class="mc-item-mileage">
+                          <span class="mc-item-num">1,500</span>
+                          <span class="mc-item-unit">미션 마일리지</span>
+                        </div>
+                      </div>
+                      <div class="mc-item-soldout" hidden>조기소진</div>
+                      <!-- hidden을 제거하면 조기소진 표시됩니다 -->
+                    </div>
+                    <img src="assets/img/ic-plus.svg" alt="" class="mc-plus">
+                    <div class="mc-item mc-item--homepc">
+                      <div class="mc-item-tag"><img src="assets/img/bi-craftbox-sm.svg" alt="CRAFTBOX"></div>
+                      <div class="mc-item-body">
+                        <span class="mc-item-place">개인PC</span>
+                        <div class="mc-item-mileage">
+                          <span class="mc-item-num">500</span>
+                          <span class="mc-item-unit">미션 마일리지</span>
+                        </div>
+                      </div>
+                      <div class="mc-item-soldout" hidden>조기소진</div>
+                      <!-- hidden을 제거하면 조기소진 표시됩니다 -->
+                    </div>
+                  </div>
+                </div>
+                <img src="assets/img/total2kmile.svg" alt="total 2000 미션 마일리지 증정" class="card-mileage">
+              </div>
+
+              <div class="mission-card-set" id="card2">
+                <div class="mission-card">
+                  <img src="assets/img/card-2-bg.svg" alt="2일차 미션" class="mission-card-bg">
+                  <div class="mission-card-content">
+                    <div class="mc-item mc-item--pcroom">
+                      <div class="mc-item-tag"><img src="assets/img/bi-pica.svg" alt="PICA"></div>
+                      <div class="mc-item-body">
+                        <span class="mc-item-place">PC방</span>
+                        <div class="mc-item-mileage">
+                          <span class="mc-item-num">1,500</span>
+                          <span class="mc-item-unit">미션 마일리지</span>
+                        </div>
+                      </div>
+                      <div class="mc-item-soldout" hidden>조기소진</div>
+                      <!-- hidden을 제거하면 조기소진 표시됩니다 -->
+                    </div>
+                    <img src="assets/img/ic-plus.svg" alt="" class="mc-plus">
+                    <div class="mc-item mc-item--homepc">
+                      <div class="mc-item-tag"><img src="assets/img/bi-craftbox-sm.svg" alt="CRAFTBOX"></div>
+                      <div class="mc-item-body">
+                        <span class="mc-item-place">개인PC</span>
+                        <div class="mc-item-mileage">
+                          <span class="mc-item-num">500</span>
+                          <span class="mc-item-unit">미션 마일리지</span>
+                        </div>
+                      </div>
+                      <div class="mc-item-soldout" hidden>조기소진</div>
+                      <!-- hidden을 제거하면 조기소진 표시됩니다 -->
+                    </div>
+                  </div>
+                </div>
+                <img src="assets/img/total2kmile.svg" alt="total 2000 미션 마일리지 증정" class="card-mileage">
+              </div>
+
+              <div class="mission-card-set" id="card3">
+                <div class="mission-card">
+                  <img src="assets/img/card-3-bg.svg" alt="3일차 미션" class="mission-card-bg">
+                  <div class="mission-card-content">
+                    <div class="mc-item mc-item--pcroom">
+                      <div class="mc-item-tag"><img src="assets/img/bi-pica.svg" alt="PICA"></div>
+                      <div class="mc-item-body">
+                        <span class="mc-item-place">PC방</span>
+                        <div class="mc-item-mileage">
+                          <span class="mc-item-num">1,500</span>
+                          <span class="mc-item-unit">미션 마일리지</span>
+                        </div>
+                      </div>
+                      <div class="mc-item-soldout" hidden>조기소진</div>
+                      <!-- hidden을 제거하면 조기소진 표시됩니다 -->
+                    </div>
+                    <img src="assets/img/ic-plus.svg" alt="" class="mc-plus">
+                    <div class="mc-item mc-item--homepc">
+                      <div class="mc-item-tag"><img src="assets/img/bi-craftbox-sm.svg" alt="CRAFTBOX"></div>
+                      <div class="mc-item-body">
+                        <span class="mc-item-place">개인PC</span>
+                        <div class="mc-item-mileage">
+                          <span class="mc-item-num">500</span>
+                          <span class="mc-item-unit">미션 마일리지</span>
+                        </div>
+                      </div>
+                      <div class="mc-item-soldout" hidden>조기소진</div>
+                      <!-- hidden을 제거하면 조기소진 표시됩니다 -->
+                    </div>
+                  </div>
+                </div>
+                <img src="assets/img/total2kmile.svg" alt="total 2000 미션 마일리지 증정" class="card-mileage">
+              </div>
+
+            </div>
+
+            <!-- Horizontal progress bar (visible on desktop) -->
+            <div class="progress-container">
+              <div class="progress-track">
+                <div class="progress-fill"></div>
+                <img src="assets/img/progress-marker.svg" alt="" class="progress-marker">
+              </div>
+            </div>
+          </div>
+
+          <!-- Vertical progress bar column (visible on 860px–1300px and mobile) -->
+          <div class="progress-col" id="progressCol" aria-hidden="true">
+            <div class="progress-track progress-track-vert">
+              <div class="progress-fill progress-fill-vert" id="progressFillVert">
+                <img src="assets/img/progress-marker.svg" alt="" class="progress-marker-vert">
+              </div>
+            </div>
+          </div>
+
         </div>
 
-        <div class="mission-layout">
 
-          <!-- Cards + progress (stacked vertically on ≤1300px) -->
-          <div class="mission-cards-progress" id="missionCardsProgress">
+        <!-- Event tip -->
+        <div class="event-tip">
 
-            <!-- Desktop: cards in a row above the progress bar -->
-            <!-- Mobile: cards column + vertical progress to the right -->
-            <div class="mission-cards-col" id="missionCardsCol">
-              <div class="mission-cards-row">
+          <img src="assets/img/eventtip-tag.svg" alt="이벤트 팁" class="event-tip-tag">
 
-                <div class="mission-card-set" id="card1">
-                  <div class="mission-card">
-                    <img src="assets/img/card-1-bg.svg" alt="1일차 미션" class="mission-card-bg">
-                    <div class="mission-card-content">
-                      <div class="mc-item mc-item--pcroom">
-                        <div class="mc-item-tag"><img src="assets/img/bi-pica.svg" alt="PICA"></div>
-                        <div class="mc-item-body">
-                          <span class="mc-item-place">PC방</span>
-                          <div class="mc-item-mileage">
-                            <span class="mc-item-num">1,500</span>
-                            <span class="mc-item-unit">미션 마일리지</span>
-                          </div>
-                        </div>
-                        <div class="mc-item-soldout" hidden>조기소진</div>
-                      </div>
-                      <img src="assets/img/ic-plus.svg" alt="" class="mc-plus">
-                      <div class="mc-item mc-item--homepc">
-                        <div class="mc-item-tag"><img src="assets/img/bi-craftbox-sm.svg" alt="CRAFTBOX"></div>
-                        <div class="mc-item-body">
-                          <span class="mc-item-place">개인PC</span>
-                          <div class="mc-item-mileage">
-                            <span class="mc-item-num">500</span>
-                            <span class="mc-item-unit">미션 마일리지</span>
-                          </div>
-                        </div>
-                        <div class="mc-item-soldout" hidden>조기소진</div>
-                      </div>
-                    </div>
-                  </div>
-                  <img src="assets/img/total2kmile.svg" alt="total 2000 미션 마일리지 증정" class="card-mileage">
-                </div>
+          <div class="event-tip-body">
+            <div class="event-tip-inner">
+              <img src="assets/img/event-tip-mileage.png" alt="" class="event-tip-mileage-img">
+              <p class="title">집과 PC방에서 모두 참여하면 모든 보상 획득 가능!</p>
 
-                <div class="mission-card-set" id="card2">
-                  <div class="mission-card">
-                    <img src="assets/img/card-2-bg.svg" alt="2일차 미션" class="mission-card-bg">
-                    <div class="mission-card-content">
-                      <div class="mc-item mc-item--pcroom">
-                        <div class="mc-item-tag"><img src="assets/img/bi-pica.svg" alt="PICA"></div>
-                        <div class="mc-item-body">
-                          <span class="mc-item-place">PC방</span>
-                          <div class="mc-item-mileage">
-                            <span class="mc-item-num">1,500</span>
-                            <span class="mc-item-unit">미션 마일리지</span>
-                          </div>
-                        </div>
-                        <div class="mc-item-soldout" hidden>조기소진</div>
-                      </div>
-                      <img src="assets/img/ic-plus.svg" alt="" class="mc-plus">
-                      <div class="mc-item mc-item--homepc">
-                        <div class="mc-item-tag"><img src="assets/img/bi-craftbox-sm.svg" alt="CRAFTBOX"></div>
-                        <div class="mc-item-body">
-                          <span class="mc-item-place">개인PC</span>
-                          <div class="mc-item-mileage">
-                            <span class="mc-item-num">500</span>
-                            <span class="mc-item-unit">미션 마일리지</span>
-                          </div>
-                        </div>
-                        <div class="mc-item-soldout" hidden>조기소진</div>
-                      </div>
-                    </div>
-                  </div>
-                  <img src="assets/img/total2kmile.svg" alt="total 2000 미션 마일리지 증정" class="card-mileage">
-                </div>
-
-                <div class="mission-card-set" id="card3">
-                  <div class="mission-card">
-                    <img src="assets/img/card-3-bg.svg" alt="3일차 미션" class="mission-card-bg">
-                    <div class="mission-card-content">
-                      <div class="mc-item mc-item--pcroom">
-                        <div class="mc-item-tag"><img src="assets/img/bi-pica.svg" alt="PICA"></div>
-                        <div class="mc-item-body">
-                          <span class="mc-item-place">PC방</span>
-                          <div class="mc-item-mileage">
-                            <span class="mc-item-num">1,500</span>
-                            <span class="mc-item-unit">미션 마일리지</span>
-                          </div>
-                        </div>
-                        <div class="mc-item-soldout" hidden>조기소진</div>
-                      </div>
-                      <img src="assets/img/ic-plus.svg" alt="" class="mc-plus">
-                      <div class="mc-item mc-item--homepc">
-                        <div class="mc-item-tag"><img src="assets/img/bi-craftbox-sm.svg" alt="CRAFTBOX"></div>
-                        <div class="mc-item-body">
-                          <span class="mc-item-place">개인PC</span>
-                          <div class="mc-item-mileage">
-                            <span class="mc-item-num">500</span>
-                            <span class="mc-item-unit">미션 마일리지</span>
-                          </div>
-                        </div>
-                        <div class="mc-item-soldout" hidden>조기소진</div>
-                      </div>
-                    </div>
-                  </div>
-                  <img src="assets/img/total2kmile.svg" alt="total 2000 미션 마일리지 증정" class="card-mileage">
-                </div>
-
+              <div class="desc">개인 PC 크래프트박스와 PC방 크래프트박스에서의 플레이는 <strong>별도 집계</strong>됩니다.<br>
+                집에서도 PC방에서도 이환 플레이하고 <strong>최대 6,000 마일리지 보상</strong>을 획득해보세요!
               </div>
+              <div class="notice">※ 마일리지는 로그인한 피카플레이 계정으로 자동 지급됩니다.<br>
+                ※ 마일리지 보상은 수량이 한정되어 있으며, 소진 시 지급 종료됩니다.<br>
+                ※ 미션 달성현황 및 마일리지 소진 여부는 크래프트박스 ‘혜택박스 → 마일리지 혜택’ 메뉴의 게임 미션 배너를 통해 확인 가능합니다.</div>
 
-              <!-- Horizontal progress bar (visible on desktop) -->
-              <div class="progress-container">
-                <div class="progress-track">
-                  <div class="progress-fill"></div>
-                  <img src="assets/img/progress-marker.svg" alt="" class="progress-marker">
-                </div>
-              </div>
             </div>
-
-            <!-- Vertical progress bar column (visible on 860px–1300px and mobile) -->
-            <div class="progress-col" id="progressCol" aria-hidden="true">
-              <div class="progress-track progress-track-vert">
-                <div class="progress-fill progress-fill-vert" id="progressFillVert">
-                  <img src="assets/img/progress-marker.svg" alt="" class="progress-marker-vert">
-                </div>
-              </div>
-            </div>
-
+            </p>
           </div>
+        </div>
 
-          <!-- Mileage badges row -->
-          <div class="mileage-badges">
-            <div class="mileage-badge">
-              <img src="assets/img/bi-pica.svg" alt="피카플레이">
-            </div>
-            <img src="assets/img/ic-plus.svg" alt="+" class="ic-plus">
-            <div class="mileage-badge">
-              <img src="assets/img/bi-craftbox-sm.svg" alt="크래프트박스">
-            </div>
-          </div>
-
-          <!-- Event tip -->
-          <div class="event-tip">
-            <img src="assets/img/event-tip-bg-top.svg" alt="" class="event-tip-top">
-            <div class="event-tip-body">
-              <!-- BG images stack absolutely; content div drives height -->
-              <img src="assets/img/event-tip-body-bg.svg" alt="" class="event-tip-body-bg-img">
-              <img src="assets/img/event-tip-bg-light.svg" alt="" class="event-tip-overlay">
-              <img src="assets/img/event-tip-corners.svg" alt="" class="event-tip-overlay">
-              <img src="assets/img/event-tip-border.svg" alt="" class="event-tip-overlay">
-              <div class="event-tip-inner">
-                <div class="event-tip-label-row">
-                  <img src="assets/img/event-tip-label-shape.svg" alt="" class="event-tip-label-shape">
-                  <img src="assets/img/event-tip-label-txt.svg" alt="이벤트 팁" class="event-tip-label-txt">
-                  <img src="assets/img/event-tip-mileage.png" alt="" class="event-tip-mileage-img">
-                </div>
-                <p class="event-tip-text">
-                  피카플레이 가맹 PC방에서 이환을 플레이하면 <strong>마일리지가 자동 적립</strong>됩니다.<br>
-                  누적 접속 일수에 따라 <em>최대 9,000 마일리지</em>를 획득하세요.<br>
-                  마일리지는 크래프트박스에서 게임 아이템 구매에 사용 가능합니다.
-                </p>
-              </div>
-            </div>
-          </div>
-
-        </div><!-- /.mission-layout -->
       </div>
-    </section>
+
+    </div><!-- /.mission-layout -->
+    </div>
+  </section>
 
 
-    <!-- ════════════════════════════════════════════
+  <!-- ════════════════════════════════════════════
      이벤트 참여방법
 ════════════════════════════════════════════ -->
-    <section class="sec sec-howto">
-      <div class="sec-inner">
+  <section class="sec sec-howto">
+    <div class="sec-inner">
 
-        <!-- Section title -->
-        <div class="sec-title-row">
-          <img src="assets/img/mozaic-arrow-r.svg" alt="" class="sec-arrow">
-          <img src="assets/img/howto-title.png" alt="이벤트 참여방법" class="sec-title-img">
-          <img src="assets/img/mozaic-arrow-l.svg" alt="" class="sec-arrow">
-        </div>
-
-        <!-- Tab buttons -->
-        <div class="tab-buttons" role="tablist">
-          <button class="tab-btn active" data-tab="pcroom" role="tab" aria-selected="true" aria-controls="tab-pcroom">
-            <img src="assets/img/tab-pc-active.svg" alt="PC방" id="tab-img-pcroom">
-          </button>
-          <button class="tab-btn" data-tab="homepc" role="tab" aria-selected="false" aria-controls="tab-homepc">
-            <img src="assets/img/tab-homepc-inactive.svg" alt="개인PC" id="tab-img-homepc">
-          </button>
-        </div>
-
-        <!-- Tabbox -->
-        <div class="tabbox-outer">
-          <img src="assets/img/tabbox-bg.svg" alt="" class="tabbox-bg">
-          <img src="assets/img/tabbox-top-corners.svg" alt="" class="tabbox-corner tabbox-corner-top">
-          <img src="assets/img/tabbox-bottom-corners.svg" alt="" class="tabbox-corner tabbox-corner-bottom">
-          <img src="assets/img/tabbox-border.svg" alt="" class="tabbox-border-img">
-
-          <div class="tabbox-content">
-
-            <!-- PC방 tab -->
-            <div class="tab-panel active" id="tab-pcroom" role="tabpanel">
-              <div class="steps-row">
-                <div class="step-item">
-                  <img src="assets/img/step-pc-1.png" alt="STEP 1">
-                </div>
-                <img src="assets/img/step-arrow.svg" alt="" class="step-arrow-img">
-                <div class="step-item">
-                  <img src="assets/img/step-pc-2.png" alt="STEP 2">
-                </div>
-                <img src="assets/img/step-arrow.svg" alt="" class="step-arrow-img">
-                <div class="step-item">
-                  <img src="assets/img/step-pc-3.png" alt="STEP 3">
-                </div>
-              </div>
-            </div>
-
-            <!-- 개인PC tab -->
-            <div class="tab-panel" id="tab-homepc" role="tabpanel">
-              <div class="steps-row">
-                <div class="step-item">
-                  <img src="assets/img/step-home-1.png" alt="STEP 1">
-                </div>
-                <img src="assets/img/step-arrow.svg" alt="" class="step-arrow-img">
-                <div class="step-item">
-                  <img src="assets/img/step-home-2.png" alt="STEP 2">
-                </div>
-                <img src="assets/img/step-arrow.svg" alt="" class="step-arrow-img">
-                <div class="step-item">
-                  <img src="assets/img/step-home-3.png" alt="STEP 3">
-                </div>
-              </div>
-            </div>
-
-          </div><!-- /.tabbox-content -->
-        </div><!-- /.tabbox-outer -->
-
+      <!-- Section title -->
+      <div class="sec-title-row">
+        <img src="assets/img/mozaic-arrow-r.svg" alt="" class="sec-arrow">
+        <img src="assets/img/howto-title.png" alt="이벤트 참여방법" class="sec-title-img">
+        <img src="assets/img/mozaic-arrow-l.svg" alt="" class="sec-arrow">
       </div>
-    </section>
+
+      <!-- Tab buttons -->
+      <div class="tab-buttons" role="tablist">
+        <button class="tab-btn active" data-tab="pcroom" role="tab" aria-selected="true" aria-controls="tab-pcroom">
+          <img src="assets/img/tab-pc-active.svg" alt="PC방" id="tab-img-pcroom">
+        </button>
+        <button class="tab-btn" data-tab="homepc" role="tab" aria-selected="false" aria-controls="tab-homepc">
+          <img src="assets/img/tab-homepc-inactive.svg" alt="개인PC" id="tab-img-homepc">
+        </button>
+      </div>
+
+      <!-- Tabbox -->
+      <div class="tabbox-outer">
+        <img src="assets/img/tabbox-bg.svg" alt="" class="tabbox-bg">
+        <img src="assets/img/tabbox-top-corners.svg" alt="" class="tabbox-corner tabbox-corner-top">
+        <img src="assets/img/tabbox-bottom-corners.svg" alt="" class="tabbox-corner tabbox-corner-bottom">
+        <img src="assets/img/tabbox-border.svg" alt="" class="tabbox-border-img">
+
+        <div class="tabbox-content">
+
+          <!-- PC방 tab -->
+          <div class="tab-panel active" id="tab-pcroom" role="tabpanel">
+            <div class="steps-row">
+              <div class="step-item">
+                <img src="assets/img/step-pc-1.png" alt="STEP 1">
+              </div>
+              <img src="assets/img/step-arrow.svg" alt="" class="step-arrow-img">
+              <div class="step-item">
+                <img src="assets/img/step-pc-2.png" alt="STEP 2">
+              </div>
+              <img src="assets/img/step-arrow.svg" alt="" class="step-arrow-img">
+              <div class="step-item">
+                <img src="assets/img/step-pc-3.png" alt="STEP 3">
+              </div>
+            </div>
+          </div>
+
+          <!-- 개인PC tab -->
+          <div class="tab-panel" id="tab-homepc" role="tabpanel">
+            <div class="steps-row">
+              <div class="step-item">
+                <img src="assets/img/step-home-1.png" alt="STEP 1">
+              </div>
+              <img src="assets/img/step-arrow.svg" alt="" class="step-arrow-img">
+              <div class="step-item">
+                <img src="assets/img/step-home-2.png" alt="STEP 2">
+              </div>
+              <img src="assets/img/step-arrow.svg" alt="" class="step-arrow-img">
+              <div class="step-item">
+                <img src="assets/img/step-home-3.png" alt="STEP 3">
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.tabbox-content -->
+      </div><!-- /.tabbox-outer -->
+
+    </div>
+  </section>
 
 
-    <!-- ════════════════════════════════════════════
+  <!-- ════════════════════════════════════════════
      마일리지 사용처
 ════════════════════════════════════════════ -->
-    <section class="sec sec-mileage">
-      <div class="sec-inner">
+  <section class="sec sec-mileage">
+    <div class="sec-inner">
 
-        <!-- Section title -->
-        <div class="sec-title-row">
-          <img src="assets/img/mozaic-arrow-r.svg" alt="" class="sec-arrow">
-          <img src="assets/img/mileage-title.png" alt="마일리지 사용처" class="sec-title-img">
-          <img src="assets/img/mozaic-arrow-l.svg" alt="" class="sec-arrow">
-        </div>
-
-        <!-- Subtext -->
-        <div class="mileage-subtext">
-          <img src="assets/img/enjoy-mileage.png" alt="" class="enjoy-mileage-img" style="margin: 0 auto;">
-        </div>
-
-        <!-- Arrow down -->
-        <div style="text-align:center; margin-bottom: clamp(16px,2vw,40px);">
-          <img src="assets/img/arrow-nanamedown.svg" alt="" class="mileage-arrow-down" style="display:inline-block;">
-        </div>
-
-        <!-- Mileage container -->
-        <div class="mileage-container">
-          <img src="assets/img/mileage-container-bg.svg" alt="" class="mileage-container-bg-img">
-          <div class="mileage-container-inner">
-            <img src="assets/img/mileage-usage-img.png" alt="마일리지 사용처 이미지" class="mileage-usage-img">
-          </div>
-        </div>
-
-        <!-- Description + CTA -->
-        <p class="mileage-desc">
-          적립된 마일리지로 크래프트박스에서 이환 게임 내 아이템을 구매하세요.<br>
-          PC방 이용 시 더욱 빠르게 마일리지를 쌓을 수 있습니다.
-        </p>
-
-        <a href="#" class="btn-pcguide">PC방 이용가이드</a>
-
+      <!-- Section title -->
+      <div class="sec-title-row">
+        <img src="assets/img/mozaic-arrow-r.svg" alt="" class="sec-arrow">
+        <img src="assets/img/mileage-title.png" alt="마일리지 사용처" class="sec-title-img">
+        <img src="assets/img/mozaic-arrow-l.svg" alt="" class="sec-arrow">
       </div>
-    </section>
+
+      <!-- Subtext -->
+      <div class="mileage-subtext">
+        <img src="assets/img/enjoy-mileage.png" alt="" class="enjoy-mileage-img" style="margin: 0 auto;">
+      </div>
+
+      <!-- Arrow down -->
+      <div style="text-align:center; margin-bottom: clamp(16px,2vw,40px);">
+        <img src="assets/img/arrow-nanamedown.svg" alt="" class="mileage-arrow-down" style="display:inline-block;">
+      </div>
+
+      <!-- Mileage container -->
+      <div class="mileage-container">
+        <img src="assets/img/mileage-container-bg.svg" alt="" class="mileage-container-bg-img">
+        <div class="mileage-container-inner">
+          <img src="assets/img/mileage-usage-img.png" alt="마일리지 사용처 이미지" class="mileage-usage-img">
+        </div>
+      </div>
+
+      <!-- Description + CTA -->
+      <p class="mileage-desc">
+        적립된 마일리지로 크래프트박스에서 이환 게임 내 아이템을 구매하세요.<br>
+        PC방 이용 시 더욱 빠르게 마일리지를 쌓을 수 있습니다.
+      </p>
+
+      <a href="#" class="btn-pcguide">PC방 이용가이드</a>
+
+    </div>
+  </section>
 
 
-    <!-- ════════════════════════════════════════════
+  <!-- ════════════════════════════════════════════
      FOOTER
 ════════════════════════════════════════════ -->
-    <footer>
-      <div class="footer-inner">
+  <footer>
+    <div class="footer-inner">
 
-        <div class="footer-logo">
-          <img src="assets/img/footer-confirm-logo.svg" alt="">
-        </div>
-
-        <p class="footer-heading">유의사항</p>
-
-        <ul class="footer-notices">
-          <li>
-            <img src="assets/img/bullet-sq.svg" alt="">
-            이벤트 기간 내 조건을 달성한 계정에 한해 마일리지가 지급됩니다.
-          </li>
-          <li>
-            <img src="assets/img/bullet-sq.svg" alt="">
-            본 이벤트는 피카플레이 정식 가맹 PC방 또는 크래프트박스가 설치된 개인 PC 환경에서 참여 가능합니다.
-          </li>
-          <li>
-            <img src="assets/img/bullet-sq.svg" alt="">
-            마일리지는 이환 게임 계정이 아닌 피카플레이 회원 계정에 적립됩니다.
-          </li>
-          <li>
-            <img src="assets/img/bullet-sq.svg" alt="">
-            적립된 마일리지는 크래프트박스 내 이환 관련 아이템 구매에 사용 가능하며, 현금으로 환급되지 않습니다.
-          </li>
-          <li>
-            <img src="assets/img/bullet-sq.svg" alt="">
-            마일리지는 별도 안내된 유효기간이 있으며, 유효기간 내 미사용 시 자동 소멸됩니다.
-          </li>
-          <li>
-            <img src="assets/img/bullet-sq.svg" alt="">
-            중복 계정, 비정상적인 방법으로 이벤트에 참여한 경우 지급된 마일리지가 회수될 수 있으며 계정 이용이 제한될 수 있습니다.
-          </li>
-          <li>
-            <img src="assets/img/bullet-sq.svg" alt="">
-            이벤트 기간 및 내용은 운영 상황에 따라 변경되거나 조기 종료될 수 있습니다.
-          </li>
-          <li>
-            <img src="assets/img/bullet-sq.svg" alt="">
-            이벤트 참여를 위해 피카플레이 회원 가입 및 로그인이 필요합니다.
-          </li>
-          <li>
-            <img src="assets/img/bullet-sq.svg" alt="">
-            이환 서비스 점검, 서버 장애 등 시스템 문제로 인한 참여 누락에 대해서는 보상이 제공되지 않을 수 있습니다.
-          </li>
-          <li>
-            <img src="assets/img/bullet-sq.svg" alt="">
-            크래프트박스 미설치 환경에서는 마일리지 적립이 이루어지지 않으니 사전에 설치 여부를 확인해 주세요.
-          </li>
-          <li>
-            <img src="assets/img/bullet-sq.svg" alt="">
-            마일리지 지급 및 사용 관련 문의는 피카플레이 고객센터를 통해 접수해 주세요.
-          </li>
-          <li>
-            <img src="assets/img/bullet-sq.svg" alt="">
-            이벤트 혜택은 타 이벤트/프로모션과 중복 적용되지 않을 수 있습니다.
-          </li>
-          <li>
-            <img src="assets/img/bullet-sq.svg" alt="">
-            본 이벤트의 최종 해석 권한은 주최사에게 있으며, 관련 내용은 공식 채널을 통해 확인하시기 바랍니다.
-          </li>
-        </ul>
-
+      <div class="footer-logo">
+        <img src="assets/img/footer-confirm-logo.svg" alt="">
       </div>
-    </footer>
+
+      <p class="footer-heading">유의사항</p>
+
+      <ul class="footer-notices">
+        <li>
+          <img src="assets/img/bullet-sq.svg" alt="">
+          이벤트 기간 내 조건을 달성한 계정에 한해 마일리지가 지급됩니다.
+        </li>
+        <li>
+          <img src="assets/img/bullet-sq.svg" alt="">
+          본 이벤트는 피카플레이 정식 가맹 PC방 또는 크래프트박스가 설치된 개인 PC 환경에서 참여 가능합니다.
+        </li>
+        <li>
+          <img src="assets/img/bullet-sq.svg" alt="">
+          마일리지는 이환 게임 계정이 아닌 피카플레이 회원 계정에 적립됩니다.
+        </li>
+        <li>
+          <img src="assets/img/bullet-sq.svg" alt="">
+          적립된 마일리지는 크래프트박스 내 이환 관련 아이템 구매에 사용 가능하며, 현금으로 환급되지 않습니다.
+        </li>
+        <li>
+          <img src="assets/img/bullet-sq.svg" alt="">
+          마일리지는 별도 안내된 유효기간이 있으며, 유효기간 내 미사용 시 자동 소멸됩니다.
+        </li>
+        <li>
+          <img src="assets/img/bullet-sq.svg" alt="">
+          중복 계정, 비정상적인 방법으로 이벤트에 참여한 경우 지급된 마일리지가 회수될 수 있으며 계정 이용이 제한될 수 있습니다.
+        </li>
+        <li>
+          <img src="assets/img/bullet-sq.svg" alt="">
+          이벤트 기간 및 내용은 운영 상황에 따라 변경되거나 조기 종료될 수 있습니다.
+        </li>
+        <li>
+          <img src="assets/img/bullet-sq.svg" alt="">
+          이벤트 참여를 위해 피카플레이 회원 가입 및 로그인이 필요합니다.
+        </li>
+        <li>
+          <img src="assets/img/bullet-sq.svg" alt="">
+          이환 서비스 점검, 서버 장애 등 시스템 문제로 인한 참여 누락에 대해서는 보상이 제공되지 않을 수 있습니다.
+        </li>
+        <li>
+          <img src="assets/img/bullet-sq.svg" alt="">
+          크래프트박스 미설치 환경에서는 마일리지 적립이 이루어지지 않으니 사전에 설치 여부를 확인해 주세요.
+        </li>
+        <li>
+          <img src="assets/img/bullet-sq.svg" alt="">
+          마일리지 지급 및 사용 관련 문의는 피카플레이 고객센터를 통해 접수해 주세요.
+        </li>
+        <li>
+          <img src="assets/img/bullet-sq.svg" alt="">
+          이벤트 혜택은 타 이벤트/프로모션과 중복 적용되지 않을 수 있습니다.
+        </li>
+        <li>
+          <img src="assets/img/bullet-sq.svg" alt="">
+          본 이벤트의 최종 해석 권한은 주최사에게 있으며, 관련 내용은 공식 채널을 통해 확인하시기 바랍니다.
+        </li>
+      </ul>
+
+    </div>
+  </footer>
 
 
-    <!-- ════════════════════════════════════════════
+  <!-- ════════════════════════════════════════════
      JAVASCRIPT
 ════════════════════════════════════════════ -->
-    <script>
-      (function () {
-        'use strict';
+  <script>
+    (function () {
+      'use strict';
 
-        /* ── PC방 상태 설정 ──
-           true  = PC방 ON  (초록)
-           false = PC방 OFF (회색)  */
-        var PCROOM_IS_ON = true;
+      /* ── PC방 상태 설정 ──
+         true  = PC방 ON  (초록)
+         false = PC방 OFF (회색)  */
+      var PCROOM_IS_ON = true;
 
-        var offBadge = document.querySelector('.pcroom-badge--off');
-        var onBadge  = document.querySelector('.pcroom-badge--on');
-        if (offBadge && onBadge) {
-          offBadge.hidden =  PCROOM_IS_ON;
-          onBadge.hidden  = !PCROOM_IS_ON;
+      var offBadge = document.querySelector('.pcroom-badge--off');
+      var onBadge = document.querySelector('.pcroom-badge--on');
+      if (offBadge && onBadge) {
+        offBadge.hidden = PCROOM_IS_ON;
+        onBadge.hidden = !PCROOM_IS_ON;
+      }
+
+      /* ── Tab switching ── */
+      var tabBtns = document.querySelectorAll('.tab-btn');
+      var tabPanels = document.querySelectorAll('.tab-panel');
+
+      var tabImgs = {
+        pcroom: {
+          active: 'assets/img/tab-pc-active.svg',
+          inactive: 'assets/img/tab-pc-inactive.svg'
+        },
+        homepc: {
+          active: 'assets/img/tab-homepc-active.svg',
+          inactive: 'assets/img/tab-homepc-inactive.svg'
         }
+      };
 
-        /* ── Tab switching ── */
-        var tabBtns = document.querySelectorAll('.tab-btn');
-        var tabPanels = document.querySelectorAll('.tab-panel');
+      tabBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var target = btn.getAttribute('data-tab');
 
-        var tabImgs = {
-          pcroom: {
-            active: 'assets/img/tab-pc-active.svg',
-            inactive: 'assets/img/tab-pc-inactive.svg'
-          },
-          homepc: {
-            active: 'assets/img/tab-homepc-active.svg',
-            inactive: 'assets/img/tab-homepc-inactive.svg'
-          }
-        };
-
-        tabBtns.forEach(function (btn) {
-          btn.addEventListener('click', function () {
-            var target = btn.getAttribute('data-tab');
-
-            tabBtns.forEach(function (b) {
-              var t = b.getAttribute('data-tab');
-              var img = document.getElementById('tab-img-' + t);
-              b.classList.remove('active');
-              b.setAttribute('aria-selected', 'false');
-              if (img) img.src = tabImgs[t].inactive;
-            });
-
-            btn.classList.add('active');
-            btn.setAttribute('aria-selected', 'true');
-            var activeImg = document.getElementById('tab-img-' + target);
-            if (activeImg) activeImg.src = tabImgs[target].active;
-
-            tabPanels.forEach(function (p) {
-              p.classList.remove('active');
-            });
-            var panel = document.getElementById('tab-' + target);
-            if (panel) panel.classList.add('active');
+          tabBtns.forEach(function (b) {
+            var t = b.getAttribute('data-tab');
+            var img = document.getElementById('tab-img-' + t);
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
+            if (img) img.src = tabImgs[t].inactive;
           });
+
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+          var activeImg = document.getElementById('tab-img-' + target);
+          if (activeImg) activeImg.src = tabImgs[target].active;
+
+          tabPanels.forEach(function (p) {
+            p.classList.remove('active');
+          });
+          var panel = document.getElementById('tab-' + target);
+          if (panel) panel.classList.add('active');
         });
+      });
 
-        /* ── Progress bar height (≤1300px) ── */
-        function syncProgressColHeight() {
-          var mw = window.innerWidth;
-          var col = document.getElementById('progressCol');
-          var cardsCol = document.getElementById('missionCardsCol');
-          if (!col || !cardsCol) return;
+      /* ── Progress bar height (≤1300px) ── */
+      function syncProgressColHeight() {
+        var mw = window.innerWidth;
+        var col = document.getElementById('progressCol');
+        var cardsCol = document.getElementById('missionCardsCol');
+        if (!col || !cardsCol) return;
 
-          if (mw <= 1300) {
-            var h = cardsCol.offsetHeight;
-            col.style.height = h + 'px';
-          } else {
-            col.style.height = '';
+        if (mw <= 1300) {
+          var h = cardsCol.offsetHeight;
+          col.style.height = h + 'px';
+        } else {
+          col.style.height = '';
+        }
+      }
+
+      window.addEventListener('load', syncProgressColHeight);
+      window.addEventListener('resize', syncProgressColHeight);
+
+      /* ── Mobile scroll-driven progress bar ── */
+      (function () {
+        var section = document.querySelector('.sec-mission');
+        var fill = document.getElementById('progressFillVert');
+        if (!section || !fill) return;
+
+        var cardMileages = [
+          document.querySelector('#card1 .card-mileage'),
+          document.querySelector('#card2 .card-mileage'),
+          document.querySelector('#card3 .card-mileage')
+        ];
+        var thresholds = [0.2, 0.55, 0.9];
+        var litSrc = 'assets/img/total2kmile-lit.svg';
+        var defaultSrc = 'assets/img/total2kmile.svg';
+
+        function update() {
+          var rect = section.getBoundingClientRect();
+          var scrollable = rect.height - window.innerHeight;
+          var progress = scrollable > 0
+            ? Math.max(0, Math.min(1, -rect.top / scrollable))
+            : 0;
+
+          if (window.innerWidth > 860) {
+            fill.style.height = '';
+            cardMileages.forEach(function (img) { if (img) img.src = defaultSrc; });
+            return;
           }
+
+          fill.style.height = (progress * 100) + '%';
+
+          cardMileages.forEach(function (img, i) {
+            if (!img) return;
+            var newSrc = progress >= thresholds[i] ? litSrc : defaultSrc;
+            if (img.dataset.currentSrc === newSrc) return;
+            img.dataset.currentSrc = newSrc;
+            img.style.opacity = '0';
+            setTimeout(function () {
+              img.src = newSrc;
+              img.style.opacity = '1';
+            }, 300);
+          });
         }
 
-        window.addEventListener('load', syncProgressColHeight);
-        window.addEventListener('resize', syncProgressColHeight);
-
-        /* ── Mobile scroll-driven progress bar ── */
-        (function() {
-          var section = document.querySelector('.sec-mission');
-          var fill = document.getElementById('progressFillVert');
-          if (!section || !fill) return;
-
-          var cardMileages = [
-            document.querySelector('#card1 .card-mileage'),
-            document.querySelector('#card2 .card-mileage'),
-            document.querySelector('#card3 .card-mileage')
-          ];
-          var thresholds = [0.2, 0.55, 0.9];
-          var litSrc = 'assets/img/total2kmile-lit.svg';
-          var defaultSrc = 'assets/img/total2kmile.svg';
-
-          function update() {
-            var rect = section.getBoundingClientRect();
-            var scrollable = rect.height - window.innerHeight;
-            var progress = scrollable > 0
-              ? Math.max(0, Math.min(1, -rect.top / scrollable))
-              : 0;
-
-            if (window.innerWidth > 860) {
-              fill.style.height = '';
-              cardMileages.forEach(function(img) { if (img) img.src = defaultSrc; });
-              return;
-            }
-
-            fill.style.height = (progress * 100) + '%';
-
-            cardMileages.forEach(function(img, i) {
-              if (!img) return;
-              var newSrc = progress >= thresholds[i] ? litSrc : defaultSrc;
-              if (img.dataset.currentSrc === newSrc) return;
-              img.dataset.currentSrc = newSrc;
-              img.style.opacity = '0';
-              setTimeout(function() {
-                img.src = newSrc;
-                img.style.opacity = '1';
-              }, 300);
-            });
-          }
-
-          window.addEventListener('scroll', update, { passive: true });
-          window.addEventListener('resize', update, { passive: true });
-          window.addEventListener('load', update);
-        })();
-
-
+        window.addEventListener('scroll', update, { passive: true });
+        window.addEventListener('resize', update, { passive: true });
+        window.addEventListener('load', update);
       })();
-    </script>
+
+
+    })();
+  </script>
 
 </body>
 
