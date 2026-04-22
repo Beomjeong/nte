@@ -474,23 +474,27 @@
         });
       });
 
-      /* ── Progress bar height (≤1300px) ── */
+      /* ── 공용 debounce ── */
+      function debounce(fn, wait) {
+        var t;
+        return function () { clearTimeout(t); t = setTimeout(fn, wait); };
+      }
+
+      /* ── Progress bar height ── */
       function syncProgressColHeight() {
-        var mw = window.innerWidth;
         var col = document.getElementById('progressCol');
         var cardsCol = document.getElementById('missionCardsCol');
         if (!col || !cardsCol) return;
 
-        if (mw <= 1300) {
-          var h = cardsCol.offsetHeight;
-          col.style.height = h + 'px';
+        if (window.innerWidth <= 768) {
+          col.style.height = cardsCol.offsetHeight + 'px';
         } else {
           col.style.height = '';
         }
       }
 
       window.addEventListener('load', syncProgressColHeight);
-      window.addEventListener('resize', syncProgressColHeight);
+      window.addEventListener('resize', debounce(syncProgressColHeight, 100));
 
       /* ── Mobile scroll-driven progress bar ── */
       (function () {
@@ -514,7 +518,7 @@
             ? Math.max(0, Math.min(1, -rect.top / scrollable))
             : 0;
 
-          if (window.innerWidth > 860) {
+          if (window.innerWidth > 768) {
             fill.style.height = '';
             cardMileages.forEach(function (img) { if (img) img.src = defaultSrc; });
             return;
@@ -536,7 +540,7 @@
         }
 
         window.addEventListener('scroll', update, { passive: true });
-        window.addEventListener('resize', update, { passive: true });
+        window.addEventListener('resize', debounce(update, 100));
         window.addEventListener('load', update);
       })();
 
