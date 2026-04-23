@@ -374,6 +374,12 @@ a {
   align-items: center;
 }
 
+@media (max-width: 768px) {
+  .bar-pcroom-status {
+    display: none;
+  }
+}
+
 .pcroom-badge[hidden] {
   display: none;
 }
@@ -421,14 +427,8 @@ a {
   display: flex;
   align-items: center;
   gap: clamp(1px, 1.5vw, 5px);
-  flex-wrap: wrap;
+  font-size: clamp(1.125rem, 3vw, 2rem);  flex-wrap: wrap;
   justify-content: center;
-}
-
-.bar-info-item {
-  font-size: clamp(20px, 3vw, 32px);
-  color: #c0c0c0;
-  letter-spacing: -0.15em;
 }
 
 /* 공통: 굵은 글씨 (HV급) */
