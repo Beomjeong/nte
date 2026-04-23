@@ -71,11 +71,35 @@ a {
 
 /* 가장 큰 글씨 */
 .title {
+  list-style: none;
   margin-bottom: 4%;
   font-size: clamp(1.25rem, 2.5vw, 2.125rem);
   font-weight: 700;
   color: #fff;
   letter-spacing: -0.05em;
+}
+
+.title li {
+  position: relative;
+  margin-bottom: 2px;/* 각 항목 사이 간격 */
+  text-align: left;
+  margin-left: 10px;
+}
+
+
+.title li::before {
+  content: "✦";
+  position: absolute;
+  left: -20px;
+  top: 0px;
+
+  /* 💡 5. 이미지 불렛 설정 */
+  /* width: 10px;
+  height: 10px;
+  background-image: url('assets/img/bullet-komejirushi.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; */
 }
 
 .title-mile {
@@ -113,10 +137,38 @@ a {
 
 /* 가장 작은 글씨 */
 .notice {
+  list-style: none;
+  /* 💡 1. 일단 기본 점을 완전히 지웁니다 */
   font-size: clamp(15px, 1.4vw, 18px);
   font-weight: 400;
   color: #fff;
   letter-spacing: -0.05em;
+
+}
+
+.notice li {
+  position: relative;
+  margin-bottom: 2px;/* 각 항목 사이 간격 */
+  text-align: left;
+  margin-left: 10px;
+}
+
+
+.notice li::before {
+  content: "";
+  /* 빈 상자를 만듭니다 */
+  position: absolute;
+  left: -20px;
+  top: 6px;
+
+  /* 💡 5. 이미지 불렛 설정 */
+  width: 10px;
+  /* 기호 크기 */
+  height: 10px;
+  background-image: url('assets/img/bullet-komejirushi.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .notice-awai {
@@ -497,7 +549,7 @@ a {
   display: flex;
   align-items: center;
   gap: clamp(1px, 1.5vw, 5px);
-  font-size: clamp(1.125rem, 2vw, 2rem);
+  font-size: clamp(1rem, 2vw, 1.25rem);
   line-height: 1.2;
   flex-wrap: wrap;
   justify-content: center;
