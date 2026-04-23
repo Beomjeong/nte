@@ -54,13 +54,14 @@
           <div class="hero-period-box">
             <div class="hero-period-row">
               <img src="assets/img/bullet-sq.svg" alt="" class="hero-period-bullet">
-              <span class="hero-period-label">이벤트 기간 :</span>
-              <span class="hero-period-value">2026. 04. 30 (목) ~ 2026. 05. 31 (일)</span>
+              <!-- <img src="assets/img/bt-play-now.png" alt="참여대상 : 피카플레이 회원" class="hero-cta"> -->
+              <span class="hero-period-label">참여 대상 :</span>
+              <span class="hero-period-value">피카플레이 회원</span>
             </div>
             <div class="hero-period-row">
               <img src="assets/img/bullet-sq.svg" alt="" class="hero-period-bullet">
-              <span class="hero-period-label">참여 대상 :</span>
-              <span class="hero-period-value">피카플레이 회원</span>
+              <span class="hero-period-label">이벤트 기간 :</span>
+              <span class="hero-period-value">2026. 04. 30 (목) ~ 2026. 05. 31 (일)</span>
             </div>
           </div>
 
@@ -135,7 +136,7 @@
           <!-- Desktop: cards in a row above the progress bar -->
           <!-- Mobile: cards column + vertical progress to the right -->
           <div class="mission-cards-col" id="missionCardsCol">
-          <div class="mission-cards-row">
+            <div class="mission-cards-row">
               <div class="daily-mission-card-col" id="card1">
                 <div class="daily-mission-card">
                   <img src="assets/img/img_mission_01.png" alt="" class="daily-mission-bg">
@@ -145,7 +146,14 @@
                   <img src="assets/img/individual_mission_point.png" alt="" class="daily-mission02-content">
                   <img src="assets/img/individual_mission_point_dim.png" alt="" class="daily-mission02-content" hidden>
                 </div>
-                <div class="daily-mssion-total-mileage"><img src="assets/img/total2kmile.svg" alt="" class="card-mileage"></div>
+                <!-- <div class="daily-mssion-total-mileage"><img src="assets/img/total2kmile.svg" alt=""
+                    class="card-mileage"></div> -->
+                <div class="daily-mssion-total-mileage">
+                  <div class="totalmile-container">
+                    <img src="assets/img/total2kmile.svg" alt="" class="card-mileage pink">
+                    <img src="assets/img/total2kmile-lit.svg" alt="" class="card-mileage cyan">
+                  </div>
+                </div>
               </div>
               <div class="daily-mission-card-col" id="card2">
                 <div class="daily-mission-card">
@@ -156,7 +164,10 @@
                   <img src="assets/img/individual_mission_point.png" alt="" class="daily-mission02-content">
                   <img src="assets/img/individual_mission_point_dim.png" alt="" class="daily-mission02-content" hidden>
                 </div>
-                <div class="daily-mssion-total-mileage"><img src="assets/img/total2kmile.svg" alt="" class="card-mileage"></div>
+                <div class="totalmile-container">
+                  <img src="assets/img/total2kmile.svg" alt="" class="card-mileage pink">
+                  <img src="assets/img/total2kmile-lit.svg" alt="" class="card-mileage cyan">
+                </div>
               </div>
               <div class="daily-mission-card-col" id="card3">
                 <div class="daily-mission-card">
@@ -167,7 +178,10 @@
                   <img src="assets/img/individual_mission_point.png" alt="" class="daily-mission02-content">
                   <img src="assets/img/individual_mission_point_dim.png" alt="" class="daily-mission02-content" hidden>
                 </div>
-                <div class="daily-mssion-total-mileage"><img src="assets/img/total2kmile.svg" alt="" class="card-mileage"></div>
+                <div class="totalmile-container">
+                  <img src="assets/img/total2kmile.svg" alt="" class="card-mileage pink">
+                  <img src="assets/img/total2kmile-lit.svg" alt="" class="card-mileage cyan">
+                </div>
               </div>
             </div>
 
@@ -201,10 +215,10 @@
           <div class="event-tip-body">
             <div class="event-tip-inner">
               <img src="assets/img/event-tip-mileage.png" alt="" class="event-tip-mileage-img">
-              <p class="title">집과 PC방에서 모두 참여하면 <br class="br-mo">모든 보상 획득 가능!</p>
+              <p class="title">집과 PC방에서 모두 참여하면 <br class="br-mo480">모든 보상 획득 가능!</p>
 
-              <div class="desc">개인 PC 크래프트박스와 PC방 크래프트박스에서의 플레이는 <strong>별도 집계</strong>됩니다.</div>
-              <div class="desc"> 집에서도 PC방에서도 이환 플레이하고 <strong>최대 6,000 마일리지 보상</strong>을 획득해보세요!</div>
+              <div class="desc">개인 PC 크래프트박스와 PC방 <br class="br-mo480">크래프트박스에서의 플레이는 <br class="br-mo480"><strong>별도 집계</strong>됩니다.</div>
+              <div class="desc"> 집에서도 PC방에서도 이환 플레이하고 <br class="br-mo480"><strong>최대 6,000 마일리지 보상</strong>을 획득해보세요!</div>
               <div class="notice-awai">※ 마일리지는 로그인한 피카플레이 계정으로 자동 지급됩니다.<br>
                 ※ 마일리지 보상은 수량이 한정되어 있으며, 소진 시 지급 종료됩니다.<br>
                 ※ 미션 달성현황 및 마일리지 소진 여부는 크래프트박스 ‘혜택박스 → 마일리지 혜택’ 메뉴의 게임 미션 배너를 통해 확인 가능합니다.</div>
@@ -254,19 +268,19 @@
               <div class="step-col">
                 <img src="assets/img/badge_step1.svg" alt="STEP 1" class="step-badge">
                 <img src="assets/img/step-pc-1.png" alt="STEP 1" class="step-card-img">
-                <p class="desc">피카 PC방 좌석에서 <br>피카플레이 회원으로 로그인</p>
+                <p class="desc-inbox">피카 PC방 좌석에서 <br>피카플레이 회원으로 로그인</p>
               </div>
               <img src="assets/img/step-arrow.svg" alt="" class="step-arrow-img">
               <div class="step-col">
                 <img src="assets/img/badge_step2.svg" alt="STEP 2" class="step-badge">
                 <img src="assets/img/step-pc-2.png" alt="STEP 2" class="step-card-img">
-                <p class="desc"> 이환 하루 1시간 <br>이상 플레이</p>
+                <p class="desc-inbox"> 이환 하루 1시간 <br>이상 플레이</p>
               </div>
               <img src="assets/img/step-arrow.svg" alt="" class="step-arrow-img">
               <div class="step-col">
                 <img src="assets/img/badge_step3.svg" alt="STEP 3" class="step-badge">
                 <img src="assets/img/step-pc-3.png" alt="STEP 3" class="step-card-img">
-                <p class="desc">피카플레이 APP 또는 <br> 크래프트박스 마이페이지에서 <br>마일리지 보상 확인</p>
+                <p class="desc-inbox">피카플레이 APP 또는 <br> 크래프트박스 마이페이지에서 <br>마일리지 보상 확인</p>
               </div>
             </div>
           </div>
@@ -513,30 +527,35 @@
 
         function update() {
           var rect = section.getBoundingClientRect();
-          var scrollable = rect.height - window.innerHeight;
+          // 1. 시작 타이밍 조절 (화면 하단에서 40% 올라왔을 때 시작)
+          var startOffset = window.innerHeight * 0.4;
+          // 2. 전체 스크롤 가능한 영역 계산
+          var scrollable = rect.height - window.innerHeight + startOffset;
+          // 3. 순수 진행도 계산 (0 ~ 1)
           var progress = scrollable > 0
-            ? Math.max(0, Math.min(1, -rect.top / scrollable))
+            ? Math.max(0, Math.min(1, (-rect.top + startOffset) / (rect.height - startOffset)))
             : 0;
-
-          if (window.innerWidth > 768) {
+            
+          // 프로그레스바 모바일 적용
+          if (window.innerWidth <= 768) {
+            fill.style.height = (progress * 100) + '%';
+          } else {
             fill.style.height = '';
-            cardMileages.forEach(function (img) { if (img) img.src = defaultSrc; });
-            return;
           }
 
-          fill.style.height = (progress * 100) + '%';
+          // 이미지 소스를 바꾸지 않고 클래스만 껐다 켰다 합니다.
+          if (window.innerWidth <= 768) {
+            for (var i = 0; i < thresholds.length; i++) {
+              var cardCol = document.getElementById('card' + (i + 1));
+              if (!cardCol) continue;
 
-          cardMileages.forEach(function (img, i) {
-            if (!img) return;
-            var newSrc = progress >= thresholds[i] ? litSrc : defaultSrc;
-            if (img.dataset.currentSrc === newSrc) return;
-            img.dataset.currentSrc = newSrc;
-            img.style.opacity = '0';
-            setTimeout(function () {
-              img.src = newSrc;
-              img.style.opacity = '1';
-            }, 300);
-          });
+              if (progress >= thresholds[i]) {
+                cardCol.classList.add('active'); // 불 켜라!
+              } else {
+                cardCol.classList.remove('active'); // 불 꺼라!
+              }
+            }
+          }
         }
 
         window.addEventListener('scroll', update, { passive: true });
