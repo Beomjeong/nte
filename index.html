@@ -206,9 +206,8 @@
           <!-- Vertical progress bar column (visible on 860px–1300px and mobile) -->
           <div class="progress-col" id="progressCol" aria-hidden="true">
             <div class="progress-track progress-track-vert">
-              <div class="progress-fill progress-fill-vert" id="progressFillVert">
-                <img src="assets/img/progress-marker.svg" alt="" class="progress-marker-vert">
-              </div>
+              <div class="progress-fill progress-fill-vert" id="progressFillVert"></div>
+              <img src="assets/img/progress-marker.svg" alt="" class="progress-marker-vert" id="progressMarkerVert">
             </div>
           </div>
 
@@ -497,53 +496,60 @@
       (function () {
         var section = document.querySelector('.sec-mission');
         var fill = document.getElementById('progressFillVert');
+        var marker = document.getElementById('progressMarkerVert');
+        var track = fill ? fill.parentElement : null;
         if (!section || !fill) return;
 
-        var cardMileages = [
-          document.querySelector('#card1 .card-mileage'),
-          document.querySelector('#card2 .card-mileage'),
-          document.querySelector('#card3 .card-mileage')
-        ];
-        var thresholds = [0.2, 0.55, 0.9];
-        var litSrc = 'assets/img/total2kmile-lit.svg';
-        var defaultSrc = 'assets/img/total2kmile.svg';
+        var thresholds = [0.1, 0.45, 0.80]; // total 2000 색변화 시점
+
+        /* 레이아웃 측정값 캐시 — scroll에서는 읽지 않음 */
+        var sectionDocTop = 0, sectionHeight = 0, trackHeight = 0;
+
+        function cacheLayout() {
+          var rect = section.getBoundingClientRect();
+          sectionDocTop = rect.top + window.scrollY;
+          sectionHeight = rect.height;
+          trackHeight = track ? track.offsetHeight : 0;
+        }
 
         function update() {
-          var rect = section.getBoundingClientRect();
-          // 1. 시작 타이밍 조절 (화면 하단에서 40% 올라왔을 때 시작)
-          var startOffset = window.innerHeight * 0.4;
-          // 2. 전체 스크롤 가능한 영역 계산
-          var scrollable = rect.height - window.innerHeight + startOffset;
-          // 3. 순수 진행도 계산 (0 ~ 1)
-          var progress = scrollable > 0
-            ? Math.max(0, Math.min(1, (-rect.top + startOffset) / (rect.height - startOffset)))
-            : 0;
+          var isMobile = window.innerWidth <= 768;
 
-          // 프로그레스바 모바일 적용
-          if (window.innerWidth <= 768) {
-            fill.style.height = (progress * 100) + '%';
-          } else {
-            fill.style.height = '';
+          if (!isMobile) {
+            fill.style.transform = '';
+            if (marker) marker.style.transform = 'translateX(-50%) translateY(-50%)';
+            for (var j = 0; j < thresholds.length; j++) {
+              var c = document.getElementById('card' + (j + 1));
+              if (c) c.classList.remove('active');
+            }
+            return;
           }
 
-          // 이미지 소스를 바꾸지 않고 클래스만 껐다 켰다 합니다.
-          if (window.innerWidth <= 768) {
-            for (var i = 0; i < thresholds.length; i++) {
-              var cardCol = document.getElementById('card' + (i + 1));
-              if (!cardCol) continue;
+          var startOffset = window.innerHeight * 0.4;
+          var relTop = sectionDocTop - window.scrollY;
+          var progress = Math.max(0, Math.min(1,
+            (-relTop + startOffset) / (sectionHeight - startOffset)
+          ));
 
-              if (progress >= thresholds[i]) {
-                cardCol.classList.add('active'); // 불 켜라!
-              } else {
-                cardCol.classList.remove('active'); // 불 꺼라!
-              }
-            }
+          /* fill과 마커 동기화 — 둘 다 5% 앞선 위치 기준 */
+          var leadProgress = Math.min(1, progress + 0.15);
+          fill.style.transform = 'scaleY(' + leadProgress + ')';
+
+          if (marker && trackHeight > 0) {
+            var markerY = leadProgress * trackHeight;
+            marker.style.transform = 'translateX(-50%) translateY(calc(' + markerY + 'px - 50%))';
+          }
+
+          for (var i = 0; i < thresholds.length; i++) {
+            var cardCol = document.getElementById('card' + (i + 1));
+            if (cardCol) cardCol.classList.toggle('active', progress >= thresholds[i]);
           }
         }
 
+        cacheLayout();
+        window.addEventListener('load', function () { cacheLayout(); update(); });
         window.addEventListener('scroll', update, { passive: true });
-        window.addEventListener('resize', debounce(update, 100));
-        window.addEventListener('load', update);
+        window.addEventListener('resize', debounce(function () { cacheLayout(); update(); }, 100));
       })();
 
 
