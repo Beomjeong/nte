@@ -1,3 +1,6 @@
+a {text-decoration:none;}
+button {border:0 none;background-color:transparent;cursor:pointer;outline:none; -webkit-tap-highlight-color:transparent /* 탭영역 터치시 영역 컬러 지정 */}
+
 :root {
   --pink: #fc5693;
   --cyan: #4fe5fb;
