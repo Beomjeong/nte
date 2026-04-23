@@ -79,7 +79,7 @@ a {
 }
 
 .desc-inbox {
-  font-size: clamp(1.125rem, 1.8vw, 1.44rem);
+  font-size: clamp(1.125rem, 1.8vw, 1.625rem);
   font-weight: 400;
   color: #fff;
   letter-spacing: -0.05em;
@@ -541,7 +541,14 @@ a {
   align-items: center;
   justify-content: center;
   gap: clamp(10px, 1.8vw, 36px);
-  margin-bottom: clamp(32px, 5vw, 100px);
+  margin-bottom: 1%;
+}
+.sec-title-column {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  /* gap: clamp(10px, 1.8vw, 36px); */
 }
 
 .sec-arrow {
@@ -640,6 +647,7 @@ background-attachment: fixed; 스크롤을 내려도 배경은 고정되어 있�
   align-items: flex-end;
   gap: clamp(12px, 2vw, 40px);
   justify-content: center;
+  margin-top: 10%;
 }
 
 .mission-card-set {
@@ -931,6 +939,7 @@ background-attachment: fixed; 스크롤을 내려도 배경은 고정되어 있�
 .event-tip {
   position: relative;
   width: clamp(300px, 66vw, 1200px);
+  margin-top: 5%;
 }
 
 /* Tab: bg-top(검정) + label-shape(회색) + label-txt 가 쌓인 구조 */
@@ -938,7 +947,7 @@ background-attachment: fixed; 스크롤을 내려도 배경은 고정되어 있�
   display: block;
   width: clamp(160px, 22vw, 340px);
   height: auto;
-  margin-left: clamp(6px, 1vw, 16px);
+  margin-left: clamp(6px, 4vw, 30px);
 }
 
 .event-tip-body {
@@ -1076,9 +1085,9 @@ background-attachment: fixed; 스크롤을 내려도 배경은 고정되어 있�
   display: flex;
   justify-content: center;
   gap: 0;
-  transform: translateY(clamp(40px, 10vw, 140px));
-  /* active 상태일 때는 여기서 위로 살짝 올라오게 */
-  /* transition: transform 0.3s ease; */
+    transform: translateY(55%);
+  /* 탭버튼 기본 높이 위치*/
+  transition: transform 0.3s ease;
 }
 
 .tab-buttons button {
@@ -1118,9 +1127,9 @@ background-attachment: fixed; 스크롤을 내려도 배경은 고정되어 있�
 }
 
 .tab-btn img {
-  width: clamp(230px, 28vw, 620px);
+  width: clamp(200px, 20vw, 560px);
+    /* 탭크기 조절 */
   display: block;
-  top: 60%;
 }
 
 .tabbox-outer {
@@ -1287,11 +1296,12 @@ background-attachment: fixed; 스크롤을 내려도 배경은 고정되어 있�
 }
 
 .mileage-subtext {
-  margin-bottom: clamp(24px, 3.5vw, 70px);
+  /* margin-bottom: clamp(24px, 3.5vw, 70px); */
 }
 
 .enjoy-mileage-img {
-  width: clamp(200px, 30vw, 560px);
+  /* width: clamp(200px, 30vw, 560px); */
+  width: 70%;
   display: inline-block;
 }
 
@@ -1304,8 +1314,20 @@ background-attachment: fixed; 스크롤을 내려도 배경은 고정되어 있�
 
 .mileage-container {
   position: relative;
-  max-width: clamp(320px, 65vw, 1200px);
-  margin: 0 auto clamp(24px, 3.5vw, 70px);
+  display: flex;
+  width: 100%;
+  padding: clamp(40px, 5.5vw, 110px) clamp(28px, 4vw, 80px);
+  /* max-width: clamp(320px, 65vw, 1200px); */
+  /* margin: 0 auto clamp(24px, 3.5vw, 70px); */
+  background:
+    /* 패턴*/
+    url('assets/img/box_pattern_liquid2.png') center center / cover,
+    /* 배경색 (가장 아래) */
+    #767676;
+  border: 3px solid #161616;
+  border-radius: clamp(18px, 1.95vw, 50px);
+
+  overflow: hidden;
 }
 
 .mileage-container-bg-img {
@@ -1318,11 +1340,21 @@ background-attachment: fixed; 스크롤을 내려도 배경은 고정되어 있�
   inset: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: space-between; */
+}
+
+.mileage-container-col {
+  width: 100%;
+  min-width: 65%;
+  display: flex;
+  flex-direction: column; /* 세로 방향(열)으로 나열 */
+  align-items: left;    /* 세로로 서 있을 때 가로 기준 중앙 정렬 */
+  justify-content: top;  ;
+  text-align: left;
 }
 
 .mileage-usage-img {
-  width: 82%;
+  width: 100%;
 }
 
 .mileage-desc {
@@ -1333,25 +1365,28 @@ background-attachment: fixed; 스크롤을 내려도 배경은 고정되어 있�
 }
 
 .btn-pcguide {
+  max-width: 460px;
+  max-height: 104px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border: 2px solid var(--cyan);
-  color: var(--cyan);
+  color: #08080f;
   font-family: 'Noto Sans KR', sans-serif;
-  font-size: clamp(13px, 1.3vw, 22px);
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
   font-weight: 700;
   letter-spacing: 0.06em;
   padding: clamp(10px, 1.3vw, 24px) clamp(24px, 3.5vw, 70px);
+  margin: 5% 0 2% 0;
   cursor: pointer;
-  background: transparent;
-  border-radius: 2px;
+  background: rgba(80, 229, 251, 0.6);
+  border-radius: 99px;
   transition: background 0.2s, color 0.2s;
 }
 
 .btn-pcguide:hover {
-  background: var(--cyan);
-  color: #08080f;
+  background: #4FE5FB;
+  color: #ffffff;
 }
 
 
@@ -1483,12 +1518,12 @@ footer {
   }
 
 
-  /* .tab-buttons {
-  display: flex;
+  .tab-buttons {
+  /* display: flex;
   justify-content: center;
   gap: 0;
-  transform: translateY(clamp(40px, 10vw, 140px));
-  } */
+  transform: translateY(clamp(40px, 10vw, 140px)); */
+  }
 
   .bar-pcroom {
     gap: 8px;
@@ -1528,7 +1563,7 @@ footer {
   }
 
   .step-col .step-card-img {
-    max-width: clamp(280px, 80vw, 480px);
+    max-width: clamp(280px, 70vw, 480px);
     margin-inline: auto;
   }
 
@@ -1543,6 +1578,17 @@ footer {
     position: absolute;
   }
 
+  .mileage-container  {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: clamp(20px, 3vw, 60px);
+  }
+
+  .event-tip-tag {
+  display: block;
+  margin: 0 auto; /* 위아래는 0, 좌우는 자동으로 채워 중앙 정렬 */
+}
 }
 
 
