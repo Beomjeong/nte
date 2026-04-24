@@ -3,17 +3,17 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="icon" type="image/png" href="./favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <title>이환 그랜드 오픈 기념 이벤트 - 피카PC방에서는 더 큰 혜택!</title>
 
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ics.mediaweb.co.kr/_event/20260430_nte/"> 
   <!-- FTP상 경로확인 후 수정 -->
+  <meta property="og:url" content="https://ics.mediaweb.co.kr/_event/20260430_nte/">
   <meta property="og:title" content="피카PC방에선 더 큰 혜택! 이환 그랜드 오픈 기념 이벤트">
   <meta property="og:description" content="집과 PC방 중복혜택! 이벤트 미션 달성하면 최대 6천 마일리지 보상!">
   <meta property="og:image"
-    content="https://ics.mediaweb.co.kr/_event/20260430_nte/assets/thumb_event.png?v=20260430">
+    content="https://ics.mediaweb.co.kr/_event/20260430_nte/assets/img/thumb_event.png?v=20260430">
 
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,13 +24,13 @@
 <body>
 
   <!-- ════════════════════════════════════════════
-     HERO
+     Section01: HERO
 ════════════════════════════════════════════ -->
   <section class="sec-hero">
     <img src="assets/img/hero-kv.png" alt="" class="hero-kv">
     <img src="assets/img/top-shadow.png" alt="" class="hero-top-shadow">
 
-    <!-- Logos: absolute top-left / top-right corners -->
+    <!-- logo bi 두 개 양쪽정렬 -->
     <div class="hero-logos">
       <img src="assets/img/bi-nte.png" alt="NTE" class="logo-nte">
       <img src="assets/img/bi-craftbox.svg" alt="크래프트박스" class="logo-craftbox">
@@ -38,7 +38,7 @@
 
     <div class="hero-content">
 
-      <!-- Head title + play button (overlaid at end of "PLAY" text) -->
+      <!-- 헤드타이틀이랑 돌아가는 플레이버튼 -->
       <div class="hero-title-play-wrap">
         <img src="assets/img/head-title2.png" alt="헤테로 정착, 지금 PLAY - PC방에선 더 큰 혜택!" class="hero-head-title">
         <a href="https://nte.perfectworld.com/kr/index.html" target="_blank" class="hero-play-link">
@@ -49,7 +49,7 @@
         </a>
       </div>
 
-      <!-- Event info + CTA: pushed to bottom via space-between -->
+      <!-- 이벤트 상세 및 지금플레이 버튼(CTA btn)-->
       <div class="hero-bottom">
         <div class="hero-event-info">
 
@@ -65,11 +65,6 @@
           </div>
 
           <div class="hero-period-box">
-            <!-- <div class="hero-period-row">
-              <img src="assets/img/bullet-sq.svg" alt="" class="hero-period-bullet">
-              <span class="hero-period-label">참여 대상 :</span>
-              <span class="hero-period-value">피카플레이 회원</span>
-            </div> -->
             <div class="hero-period-row">
               <span><img src="assets/img/period_1-1.svg" alt="참여대상 :" class="hero-period-label-img2"></span>
               <span><img src="assets/img/period_1-2.svg" alt="피카플레이 회원" class="hero-period-value-img"></span>
@@ -83,23 +78,22 @@
 
         </div>
 
-        <!-- CTA -->
+        <!-- CTA 지금 플레이 버튼 -->
         <a href="https://nte.perfectworld.com/kr/index.html" target="_blank" class="hero-play-link">
           <img src="assets/img/bt-play-now.png" alt="지금 바로 플레이" class="hero-cta"></a>
-      </div><!-- /.hero-bottom -->
-
+      </div>
     </div>
-
+    <!-- 바닥 둥근 테두리 배경-->
     <img src="assets/img/deco-box-bottom.png" alt="" class="hero-bottom-deco">
     <img src="assets/img/sec_div_shadow.png" alt="" class="hero-sec-div-shadow">
   </section>
 
   <!-- ════════════════════════════════════════════
-     PC방 STATUS BAR
+     PC방 ON/OFF 뱃지 - 스크립트 하단 var PCROOM_IS_ON 부분 자바스크립트 true/false 수정하면 변경돼요.
 ════════════════════════════════════════════ -->
   <div class="bar-pcroom reveal">
     <div class="bar-pcroom-status">
-      <!-- PC방 OFF (default) -->
+      <!-- PC방 OFF -->
       <div class="pcroom-badge pcroom-badge--off">
         <img src="assets/img/pc-dot-off.png" alt="" class="pcroom-dot">
         <span class="pcroom-label">PC방 OFF</span>
@@ -124,7 +118,7 @@
     </div>
   </div>
   <!-- ════════════════════════════════════════════
-     TICKER
+     TICKER - 눈에도 잘 안띄고 기능도 없지만 그래도 은은하게 예쁜 텍스트 롤링 장식 ><
 ════════════════════════════════════════════ -->
   <div class="sec-ticker" aria-hidden="true">
     <div class="ticker-track">
@@ -139,7 +133,7 @@
   </div><!-- /.sec-ticker -->
 
   <!-- ════════════════════════════════════════════
-     이벤트 미션
+     SECTION 02: 이벤트 미션
 ════════════════════════════════════════════ -->
   <section class="sec sec-mission">
     <div class="sec-inner">
@@ -264,7 +258,7 @@
 
 
   <!-- ════════════════════════════════════════════
-     이벤트 참여방법
+     SECTION 03: 이벤트 참여방법
 ════════════════════════════════════════════ -->
   <section class="sec sec-howto">
     <div class="sec-inner reveal">
@@ -348,7 +342,7 @@
 
 
   <!-- ════════════════════════════════════════════
-     마일리지 사용처
+     SECTION 04: 마일리지 사용처
 ════════════════════════════════════════════ -->
   <section class="sec sec-mileage">
     <div class="sec-inner">
@@ -385,7 +379,7 @@
 
 
   <!-- ════════════════════════════════════════════
-     FOOTER
+     FOOTER - 꼭 확인하세요! (유의사항)
 ════════════════════════════════════════════ -->
   <footer>
     <div class="footer-inner reveal">
@@ -463,8 +457,8 @@
       'use strict';
 
       /* ── PC방 상태 설정 ──
-         true  = PC방 ON  (초록)
-         false = PC방 OFF (회색)  */
+         var PCROOM_IS_ON = true  : PC방 ON  (초록)
+         var PCROOM_IS_ON = false : PC방 OFF (회색)  */
       var PCROOM_IS_ON = true;
 
       var offBadge = document.querySelector('.pcroom-badge--off');
