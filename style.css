@@ -69,10 +69,17 @@ a {
   font styles
 ════════════════════════════════════════════ */
 
+.event-tip-body p, 
+.event-tip-body .desc, 
+.event-tip-body li {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
 /* 가장 큰 글씨 */
 .title {
   list-style: none;
-  margin-bottom: 4%;
+  /* margin-bottom: 4%; */
   font-size: clamp(1.25rem, 2.5vw, 2.125rem);
   font-weight: 700;
   color: #fff;
@@ -83,14 +90,14 @@ a {
   position: relative;
   margin-bottom: 2px;/* 각 항목 사이 간격 */
   text-align: left;
-  margin-left: 10px;
+  margin-left: 30px; /*들여쓰기*/
 }
 
 
 .title li::before {
   content: "✦";
   position: absolute;
-  left: -20px;
+  left: -40px;
   top: 0px;
 }
 
