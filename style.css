@@ -398,7 +398,7 @@ a {
   min-height: clamp(70px, 7.5vw, 192px);
   padding: clamp(18px, 2.5vw, 64px) clamp(30px, 2vw, 72px);
   background:
-    url('/assets/img/box_pattern.png') center center / cover,
+    url('./assets/img/box_pattern.png') center center / cover,
     rgba(79, 229, 251, 0.8);
 
   /* background: var(--cyan); */
@@ -647,7 +647,7 @@ a {
 ════════════════════════════════════════════ */
 .sec-mission {
   /* 이미지 경로 설정 */
-  background-image: url('/assets/img/bg_1.png');
+  background-image: url('./assets/img/bg_1.png');
 
   /* 이미지가 배경을 꽉 채우도록 설정 (디자이너 필수 옵션!) */
   background-repeat: no-repeat;
@@ -937,7 +937,7 @@ background-attachment: fixed; 스크롤을 내려도 배경은 고정되어 있�
    HOW-TO SECTION
 ════════════════════════════════════════════ */
 .sec-howto {
-  background-image: url('/assets/img/city_bg2.png');
+  background-image: url('./assets/img/city_bg2.png');
   background-repeat: no-repeat;
   /* 반복 여부 */
   background-position: top;
@@ -1147,7 +1147,7 @@ background-attachment: fixed; 스크롤을 내려도 배경은 고정되어 있�
 ════════════════════════════════════════════ */
 .sec-mileage {
   /* background: linear-gradient(180deg, #0b0b18 0%, var(--bg) 100%); */
-  background-image: url('/assets/img/city_bg.png');
+  background-image: url('./assets/img/city_bg.png');
   background-repeat: no-repeat;
   /* 반복 여부 */
   background-position: bottom;
@@ -1250,7 +1250,7 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.08); */
 
   padding: clamp(40px, 6vw, 120px) clamp(16px, 5vw, 100px);
-  background: url('/assets/img/bg_1.png');
+  background: url('./assets/img/bg_1.png');
   background-repeat: no-repeat;
   /* 반복 여부 */
   background-position: center;
