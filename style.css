@@ -444,23 +444,10 @@ a {
   flex-shrink: 0;
 }
 
-.hero-period-label-img {
-  /* PC 기준 높이 (시안에 맞춰 조절하세요) */
-  height: 30px;
-  width: auto;
-  display: block;
-}
-
-.hero-period-label-img2 {
-  /* PC 기준 높이 (시안에 맞춰 조절하세요) */
-  height: 31px;
-  width: auto;
-  display: block;
-}
-
+.hero-period-label-img,
+.hero-period-label-img2,
 .hero-period-value-img {
-  /* 날짜 이미지는 레이블보다 조금 더 크거나 같게 */
-  height: 30px;
+  height: clamp(16px, 1.56vw, 30px);
   width: auto;
   display: block;
 }
@@ -1407,26 +1394,6 @@ footer {
     white-space: normal;
   }
 
-  .hero-period-label-img {
-    /* PC 기준 높이 (시안에 맞춰 조절하세요) */
-    height: 16px;
-    width: auto;
-    display: block;
-  }
-
-  .hero-period-label-img2 {
-    /* PC 기준 높이 (시안에 맞춰 조절하세요) */
-    height: 17px;
-    width: auto;
-    display: block;
-  }
-
-  .hero-period-value-img {
-    /* 날짜 이미지는 레이블보다 조금 더 크거나 같게 */
-    height: 16px;
-    width: auto;
-    display: block;
-  }
 
   .steps-grid {
     grid-template-columns: 1fr;
