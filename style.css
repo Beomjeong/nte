@@ -69,8 +69,8 @@ a {
   font styles
 ════════════════════════════════════════════ */
 
-.event-tip-body p, 
-.event-tip-body .desc, 
+.event-tip-body p,
+.event-tip-body .desc,
 .event-tip-body li {
   word-break: keep-all;
   overflow-wrap: break-word;
@@ -88,9 +88,11 @@ a {
 
 .title li {
   position: relative;
-  margin-bottom: 2px;/* 각 항목 사이 간격 */
+  margin-bottom: 2px;
+  /* 각 항목 사이 간격 */
   text-align: left;
-  margin-left: 30px; /*들여쓰기*/
+  margin-left: 30px;
+  /*들여쓰기*/
 }
 
 
@@ -147,7 +149,8 @@ a {
 
 .notice li {
   position: relative;
-  margin-bottom: 2px;/* 각 항목 사이 간격 */
+  margin-bottom: 2px;
+  /* 각 항목 사이 간격 */
   text-align: left;
   margin-left: 10px;
 }
@@ -443,21 +446,21 @@ a {
 
 .hero-period-label-img {
   /* PC 기준 높이 (시안에 맞춰 조절하세요) */
-  height: 24px;
+  height: 30px;
   width: auto;
   display: block;
 }
 
 .hero-period-label-img2 {
   /* PC 기준 높이 (시안에 맞춰 조절하세요) */
-  height: 25px;
+  height: 31px;
   width: auto;
   display: block;
 }
 
 .hero-period-value-img {
   /* 날짜 이미지는 레이블보다 조금 더 크거나 같게 */
-  height: 24px;
+  height: 30px;
   width: auto;
   display: block;
 }
