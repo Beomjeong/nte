@@ -572,6 +572,10 @@
         window.addEventListener('resize', debounce(function () { cacheLayout(); update(); }, 100));
       })();
 
+      // nte 페이지에 추가
+      window.addEventListener('scroll', () => {
+        window.parent.postMessage({ type: 'scroll', y: window.scrollY }, '*');
+      });
 
     })();
   </script>
