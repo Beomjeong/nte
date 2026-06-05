@@ -583,6 +583,10 @@
           window.addEventListener('load', update);
         })();
 
+        /* ── Portfolio Viewer 연동 ── */
+        window.addEventListener('scroll', function () {
+          window.parent.postMessage({ type: 'scroll', y: window.scrollY }, '*');
+        }, { passive: true });
 
       })();
     </script>
